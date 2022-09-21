@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Combo&display=swap" rel="stylesheet">
+    <!--font-family: 'Combo', cursive;  -->
+    <title>Document</title>
+    <style>
+        header{
+            border: 1px cyan solid; 
+            background-color: antiquewhite;
+            text-align: center;
+        }
+        h1{
+            font-family: 'Combo', cursive;  
+            color:rgb(17, 12, 6);
+        }
+        nav ul{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        nav ul li{
+            list-style-type: none;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: rgb(218, 153, 69);
+            border-radius: 15px;
+            margin-right: 20px;
+        }
+        .container{
+            border: 1px solid gainsboro;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        video{
+            width: 50%;
+            
+        }
+    </style>
+
+</head>
+<body>
+<!--header é um elemento semântico -indicando o cabeçalho do site-->
+<header>
+    <h1 > Site Entretenimento</h1>
+    <nav>
+    <ul>
+        <li >  Vídeos Locais</li>
+        <li> <a href = "#videoInc" >Vídeos Incorporados </a></li>
+        <li>Audios</li>
+
+    </ul>
+    </nav>
+</header>
+
+<main style="background-color: rgba(193, 168, 168, 0.283);">
+<h3> Vídeos Locais</h3>
+<section>
+    <div class="container">
+        <video src="./Midias/Kinder_Hamster.mp4" controls></video>
+    </div>
+    <div class="container">
+        <video src="./Midias/mov_bbb.mp4"  controls ></video>
+    </div>
+</section>
+<section>
+    <h3 id="videoInc" > Vídeos Incorporados</h3>
+</section>
+</main>
+</body>
+</html>
+
