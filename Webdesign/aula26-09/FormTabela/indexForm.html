@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Formulários</title>
+</head>
+<body>
+    <h2>Formulário de Cadastro</h2>
+    <div id="formCadastro">
+        <form action="cad.php" method="get">
+        <fieldset class="formCadastro">
+            <legend>Dados Pessoais</legend>
+            <label for="iNome">Nome:</label>
+            <input type="text" name="nome" id="iNome" placeholder="Digite o nome:" required size="30" maxlength="30">
+            <div>
+                <label for="iCidade">Cidade:</label>
+                <input type="text" name="cidade" id="iCidade"><!--value="Sorocaba" disable or readonly-->
+
+                <label for="iUF">UF</label>
+                <select name="UF" id="iUF">
+                    <option value="">Escolha seu Estado</option>
+                    <optgroup label="Região Sudeste">
+                        <option value="SP">SP</option>
+                        <option value="MG">MG</option>
+                        <option value="RJ">RJ</option>
+                    </optgroup>
+                    <optgroup label="Região Sul">
+                        <option value="RS">RS</option>
+                        <option value="SC">SC</option>
+                        <option value="PR">PR</option>
+                    </optgroup>
+                </select>
+            </div>
+            <label for="iSenha">Senha:</label>
+            <input type="password" name="senha" id="iSenha" autofocus>
+            <br>
+            <label for="iCor">Cor Preferida:</label>
+            <input type="color" name="cor" id="iCor">
+            <br>
+            <label for="iNasc">Data de Nascimento:</label>
+            <input type="date" name="nasc" id="iNasc" min="1910-01-01" max="2022-09-26">
+
+            <div>
+                <legend>Estado Civil:</legend>
+                <input type="radio" name="EstadoCivil" id="Solteiro" value="Solteiro"><label for="Solteiro">Solteiro(a)</label>
+                <input type="radio" name="EstadoCivil" id="Casado" value="Casado"><label for="Casado">Casado(a)</label>
+                <input type="radio" name="EstadoCivil" id="Viúvo" value="Viúvo"><label for="Viúvo">Viúvo(a)</label>
+                <input type="radio" name="EstadoCivil" id="Divorciado" value="Divorciado"><label for="Divorciado">Divorciado(a)</label>
+            </div>
+
+            <input type="submit" value="Cadastrar">
+        </fieldset>
+        <fieldset class="formCadastro">
+            <legend>Dados Cobrança</legend>
+
+            <table border="1">
+                <tr><td>Cartão</td><td>Tipo</td></tr>
+                <tr><td>Crédito</td><td>Tipo</td></tr>
+
+            </table>
+
+            <!--Criar uma tabela:
+                tipo de cartão   nome do tipo de cartão
+
+                Opções:
+                crédito
+                débito
+                pix
+                boleto
+            -->
+
+        </fieldset>
+        </form>
+    </div>
+</body>
+</html>
