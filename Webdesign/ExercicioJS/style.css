@@ -1,0 +1,10 @@
+h1{
+    font-family: 'Silkscreen', cursive;
+}
+
+#resultado{
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    text-align: left;
+}

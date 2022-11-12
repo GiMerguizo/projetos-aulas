@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Exercícios em Aula</title>
+</head>
+<body>
+    <h1>Aula 11/10 - Teórica</h1>
+    <div>
+        <h3>Digite os números para efetuar a <strong>SOMA</strong></h3>
+        <div class="row g-2">
+            <div class="col-md">
+                <div class="mb-3">
+                    <label for="numero1" class="form-label">Número 1</label>
+                    <input type="number" class="form-control" name="numero1" id="numero1" placeholder="Insira o primeiro valor">
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="mb-3">
+                    <label for="numero2" class="form-label">Número 2</label>
+                    <input type="number" class="form-control" name="numero2" id="numero2" placeholder="Insira o segundo valor">
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="resultado" class="form-label">Resultado:</label>
+            <div>
+                <button id="resultado" type="button" class="btn btn-secondary" disabled>Aqui irá aparecer o resultado...</button>
+            </div>
+        </div>
+       
+        <div>
+            <button type="button" class="btn btn-outline-success" onclick="somar()">Somar valores</button>
+            <button type="button" class="btn btn-outline-dark" onclick="gerar()">Gerar Valores</button>
+            <button type="button" class="btn btn-outline-danger" onclick="limpar()">Limpar Dados</button>
+            <button type="button" class="btn btn-outline-primary" onclick="verifica()">Verificar o Maior</button>
+        </div>
+    </div>
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
