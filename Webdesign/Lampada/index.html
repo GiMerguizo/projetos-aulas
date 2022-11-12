@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <title>O Mistério da Lâmpada</title>
+</head>
+<body>
+    <h3>O mistério da lâmpada</h3>
+    <img id="lampada" src="luzDesligada.gif" alt="lampada apagada">
+
+    <div class="botoes">
+        <button onmousemove="ligar()"> Ligar </button>
+        <button onmouseenter="desligar()"> Desligar </button>
+        <button onclick="desaparecer()"> Desaparecer </button>
+        <button onclick="aparecer()"> Aparecer </button>
+    </div>
+
+    <div id="IMC">
+        <h3> Cálculo do IMC </h3>
+        <label for="altura">Altura</label>
+        <input type="text" name="altura" id="altura">
+        <label for="peso">Peso</label>
+        <input type="text" name="peso" id="peso">
+        <button onclick="calcular()">Calcular IMC</button>
+        <p id="resultado">Resultado do IMC...</p>
+        <p id="calculo">[ Calculando IMC... ]</p>
+    </div>
+</body>
+</html>
