@@ -1,0 +1,62 @@
+    header{
+        background-color: rgb(133, 170, 210);
+        color: aliceblue;
+        padding-bottom: 10px;
+    }
+
+    h2, h3{
+        font-family: 'Roboto', sans-serif;
+        padding-top: 15px;
+        text-align: center;
+    }
+
+    .comandos{
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    input[type='button']{
+        margin-left: 30px;
+    }
+
+    header, main, .dados{
+        font-family: "geneva";
+        border: 1px gainsboro solid;
+        border-radius: 15px;
+        margin-top: 15px;
+        margin-left:15%;
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 20px 20px 20px 20px;
+    }
+
+    .row{
+        margin-bottom: 15px;
+    }
+    
+   #imgCidade, #imgPais{
+        width: 10rem;
+        box-shadow:5px 5px 3px rgba(0,0,0,0.7); 
+        border-radius: 15px;
+    }
+
+    #imgPais{
+        width: 2rem;
+    }
+
+    #cidadeTemp{
+        margin-left: 5px;
+    }
+   
+
+    #tempo{
+        text-transform: capitalize;
+    }
+
+    .hide{
+        display: none;
+    }
