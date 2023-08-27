@@ -9,3 +9,6 @@ Projetos práticos desenvolvidos para a faculdade :computer:
 ### 2º semestre
 :white_check_mark: Web Design <br>
 :white_check_mark: Progamação Estruturada
+
+### 3º semestre
+:white_check_mark: Arquitetura e Organização de Computadores
