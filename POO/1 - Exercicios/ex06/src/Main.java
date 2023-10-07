@@ -2,16 +2,16 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        float quilowatts;
-        float salarioMinimo;
-        float valorUn;
+        double quilowatts;
+        double salarioMinimo;
+        double valorUn;
         Scanner input = new Scanner(System.in);
 
         // System.out.println("Valor de cada quilowatt (reais): R$" + ((1 / 500) * 1320.00));
         System.out.println("Salário Mínimo: R$ ");
-        salarioMinimo = input.nextFloat();
+        salarioMinimo = input.nextDouble();
         System.out.println("Consumo (kW): ");
-        quilowatts = input.nextFloat();
+        quilowatts = input.nextDouble();
 
         valorUn = salarioMinimo / 500;
 
