@@ -19,7 +19,7 @@ AS
 BEGIN
 	declare @hoje int, @anoNascimento datetime
 	set @hoje = YEAR(GETDATE())
-	set @anoNascimento = (SELECT DataNascimento FROM Personagem)
+	set @anoNascimento = YEAR(Personagem.DataNascimento)
 
 	if @hoje - @anoNascimento > 18
 	begin
@@ -39,6 +39,9 @@ ON Personagem
 AFTER INSERT
 AS
 BEGIN
+    declare @NomePersonagem varchar(), @NomeRaca varchar(), @NomeClasse varchar(), @NomeHabilidade varchar()
+    SET @detalhes = CONCAT()
+
 INSERT INTO LogFull (Tabela, Operacao, Detalhes, DataEvento) VALUES
 ('Personagem', 'Inserindo Personagem', 'Teste', getdate())
 END
@@ -48,6 +51,26 @@ END
 SELECT * FROM LogFull
 SELECT * FROM Personagem
 INSERT INTO Personagem values ('Goku2.0', 'O novo Goku', '01-01-2000', 1, 3, 75)
+
+-- Exercicio 4
+CREATE OR ALTER TRIGGER tgrLogInsertValidarPersonagem
+ON Personagem
+AFTER INSERT
+AS
+BEGIN
+    declare @hoje int, @anoNascimento datetime
+	set @hoje = YEAR(GETDATE())
+	set @anoNascimento = YEAR(Personagem.DataNascimento)
+
+	if @hoje - @anoNascimento > 18
+	begin
+		raiserror('Cadastro somente após ter a idade maior que 18 anos', 10, 1)
+		rollback
+	end
+
+    INSERT INTO LogFull (Tabela, Operacao, Detalhes, DataEvento) VALUES
+('Personagem', 'Inserindo Personagem', 'Teste', getdate())
+END
 
 -- Exercicio 5
 CREATE OR ALTER TRIGGER tgrLogAlteracaoRaca
@@ -79,3 +102,13 @@ END
 SELECT * FROM Raca;
 
 SELECT * FROM LogFull WHERE Tabela = 'Raca';
+
+-- Exercicio 6
+CREATE OR ALTER TRIGGER tgrLogDeleteHabilidade
+ON Habilidade
+AFTER DELETE
+AS
+BEGIN  
+    INSERT INTO LogFull (Tabela, Operacao, Detalhes, DataEvento) VALUES
+('Habilidade', 'Excluindo Habilidade', 'Teste', getdate())
+END
