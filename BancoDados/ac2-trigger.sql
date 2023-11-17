@@ -1,4 +1,3 @@
-
 -- AC2 - Triggers
 
 -- Exercicio 1
@@ -49,3 +48,34 @@ END
 SELECT * FROM LogFull
 SELECT * FROM Personagem
 INSERT INTO Personagem values ('Goku2.0', 'O novo Goku', '01-01-2000', 1, 3, 75)
+
+-- Exercicio 5
+CREATE OR ALTER TRIGGER tgrLogAlteracaoRaca
+ON Raca
+AFTER UPDATE
+AS
+BEGIN
+    DECLARE @nomeAntigo nvarchar(100), @origemAntiga nvarchar(100)
+    DECLARE @nomeAtual nvarchar(100), @origemAtual nvarchar(100), @detalhes nvarchar(400)
+
+    -- Captura os valores antigos
+    SELECT @nomeAntigo = Nome, @origemAntiga = Origem 
+    FROM deleted
+
+    -- Captura os valores atuais
+    SELECT @nomeAtual = Nome, @origemAtual = Origem 
+    FROM inserted
+
+    -- Formata os detalhes para inserção no Log
+    SET @detalhes = CONCAT('Nome mudou de ', @nomeAntigo, ' para ', @nomeAtual, 
+                           ', Origem mudou de ', @origemAntiga, ' para ', @origemAtual)
+
+    -- Insere no LogFull
+    INSERT INTO LogFull (Tabela, Operacao, Detalhes, DataEvento) 
+    VALUES ('Raca', 'Atualização', @detalhes, GETDATE())
+END
+
+-- Validação
+SELECT * FROM Raca;
+
+SELECT * FROM LogFull WHERE Tabela = 'Raca';
