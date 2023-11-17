@@ -140,4 +140,8 @@ END
 SELECT * FROM Habilidade
 SELECT * FROM LogFull
 INSERT INTO Habilidade(Nome, MultiplicadorPoder) VALUES ('Nova Habilidade', 350)
+<<<<<<< HEAD
 DELETE FROM Habilidade WHERE MultiplicadorPoder = '350'
+=======
+DELETE FROM Habilidade WHERE MultiplicadorPoder = '350'
+>>>>>>> fc5612e1e843d253c7c484742e20e7550c86c3c4
