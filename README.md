@@ -12,3 +12,7 @@ Projetos práticos desenvolvidos para a faculdade :computer:
 
 ### 3º semestre
 :white_check_mark: Arquitetura e Organização de Computadores
+
+### 5º semestre
+- Estrutura de Dados
+- Sistemas Operacionais
