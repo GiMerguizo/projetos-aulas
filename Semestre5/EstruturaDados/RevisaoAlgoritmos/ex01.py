@@ -1,10 +1,11 @@
 print("--- Exercício 1 ---\n")
 num = int(input('Digite um número: '))
-cont = 0
 
 def somatorio(n):
 
-    if cont == n:
-        return 0
+    if n == 1:
+        return 1
 
-    return cont + somatorio()
+    return n + somatorio(n - 1)
+
+print(somatorio(num))
