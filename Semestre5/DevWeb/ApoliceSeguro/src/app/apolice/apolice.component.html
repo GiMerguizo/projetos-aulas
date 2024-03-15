@@ -1,0 +1,36 @@
+<!--
+<div class="container">
+    <h2>Apólice Seguro</h2>
+    <form>
+        <div>
+            <label for="nome">Nome do segurado: </label>
+            <input type="text" name="nome" id="nome" required [(ngModel)]="automovel.nome">
+        </div>
+        <div>
+            <label for="sexo">Sexo: </label>
+            <input type="text" name="sexo" id="sexo" required [(ngModel)]="automovel.sexo">
+        </div>
+        <div>
+            <label for="idade">Idade: </label>
+            <input type="number" name="idade" id="idade" required [(ngModel)]="automovel.idade">
+        </div>
+        <div>
+            <label for="valor">Valor do automóvel: </label>
+            <input type="number" name="valor" id="valor" required [(ngModel)]="automovel.valor">
+        </div>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+</div>
+-->
+<div>
+    <form>
+        <div>
+            <label for="nome">Nome: </label>
+            <input [(ngModel)]="nome" type="text" id="nome">
+            <button (click)="exibirNome()">Exibir nome</button>
+            <p>Value: {{ nome }}</p>
+        </div>
+    </form>
+</div>
+
