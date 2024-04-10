@@ -140,4 +140,4 @@ END
 SELECT * FROM Habilidade
 SELECT * FROM LogFull
 INSERT INTO Habilidade(Nome, MultiplicadorPoder) VALUES ('Nova Habilidade', 350)
-DELETE FROM Habilidade WHERE MultiplicadorPoder = '350'
+DELETE FROM Habilidade WHERE MultiplicadorPoder = '350'
