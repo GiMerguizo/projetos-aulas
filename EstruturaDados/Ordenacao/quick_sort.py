@@ -1,4 +1,4 @@
-def quick_sort(arr):
+def quick_sort(arr, ordem):
     def quicksort_helper(low, high):
         if low < high:
             # Partitioning index
@@ -12,10 +12,15 @@ def quick_sort(arr):
         pivot = arr[high]
         i = low - 1
         for j in range(low, high):
-            # Se o elemento atual é menor ou igual ao pivô
-            if arr[j] <= pivot:
-                i += 1
-                arr[i], arr[j] = arr[j], arr[i]
+            if ordem == 1:
+                # Se o elemento atual é menor ou igual ao pivô
+                if arr[j] <= pivot:
+                    i += 1
+                    arr[i], arr[j] = arr[j], arr[i]
+            elif ordem == 2:
+                if arr[j] >= pivot:
+                    i += 1
+                    arr[i], arr[j] = arr[j], arr[i]
         # Trocar o pivo com o elemento seguinte à última posição trocada
         arr[i + 1], arr[high] = arr[high], arr[i + 1]
         return i + 1
