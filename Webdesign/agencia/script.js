@@ -1,42 +1,27 @@
-function relogio()
-{
+//alert("Entrando...")
+
+function relogio(){
     var datahora = new Date()
-//    document.getElementById('hora').innerText = datahora.getHours()  + ":"+ datahora.getMinutes()+ ":"+datahora.getSeconds()
+    // document.getElementById('hora').innerText = datahora.getHours() + ":" + datahora.getMinutes() + ":" + datahora.getSeconds()
     document.getElementById('hora').innerText = `${datahora.getHours()}:${datahora.getMinutes()}:${datahora.getSeconds()}`
 }
 
-setInterval(relogio, 1000)
-document.getElementById('hora').style.background = "#00f"
-document.getElementById('hora').style.color = "#FFF"
+setInterval(relogio, 1000)      //1000 = 1 segundo
+document.getElementById('hora').style.background = 'green'
 
-
-function orcar(){
-    //var adicionais= document.querySelectorAll('#adicionais')
-    var adicionais= document.querySelectorAll("input[name='adicionais']:checked")
-    //array= document.querySelectorAll("input[name='adicionais']:checked")
-    var totAd=0
-    for (i=0; i< adicionais.length; i++)
+function preco(){
+    array= document.querySelectorAll("input[name='adicionais']:checked")
+    totAd=0;
+    for (i=0; i<array.lenght; i++)
     {
-        totAd += Number(adicionais[i].value)
+        totAd += Number(array[i].value)
     }
 
-    if(document.getElementById('destino').value == 'RS')
-        destino = 1000
-    else if(document.getElementById('destino').value == 'PR')
-        destino = 900
-    else    
-        destino = -1
-
-    nome = document.getElementById('nome').value
-    total = destino + totAd
-
-    document.getElementById('pacote').innerText = `${nome} comprou o pacote e pagará ${totAd}`
-    document.getElementById('valorDestino').innerHTML = `Valor do destino escolhido: R$${destino.toFixed(2)}`
-    document.getElementById('total').innerText = `Valor total: R$${total.toFixed(2)}`    
+    document.getElementById('total').innerText = totAd
 }
 
-function limpar(){  
-    document.getElementById('formC').reset()
+function limpar(){
+    document.getElementById('formCadastro').reset
 }
 
 function imprimir(){

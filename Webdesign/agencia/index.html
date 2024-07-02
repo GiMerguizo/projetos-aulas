@@ -5,44 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TurSONHO</title>
-    <script src="script.js" defer>  </script>
+    <script src="./script.js" defer></script>
 </head>
 <body>
-    <h3>Agência Sonhooo de Viagemm</h3>
+    <h3> Agência Sonho de Viagem </h3>
     <span id="hora"> Hora: </span>
-        <form id="formC" action="#">
-            <input type="text" name="nome" 
-            id="nome" placeholder="Informe seu nome">
+    <form action="#" id="formCadastro">
+        <input type="text" name="nome" id="nome" placeholder="Informe seu nome">
 
-            <label for="pacote">Escolha seu destino</label>
-            <select name="destino" id="destino">
-                <option value="RS">Rio Grande do Sul- Gramado</option>
-                <option value="PR">Paraná - Curitiba</option>
-            </select>
+        <label for="pacote">Escolha seu destino</label>
+        <select name="destino" id="destino">
+            <option value="RS">Rio Grande do Sul - Gramado</option>
+            <option value="BA">Bahia - Itabuna</option>
+        </select>
 
-            <label for="guia">Deseja Guia Turístico?</label>
-            <input type="radio" name="guia" id="guiaSim" value="500">Sim
-            <input type="radio" name="guia" id="guiaNao" value="0">Não
+        <label for="guia">Deseja Guia Turístico?</label>
+        <input type="radio" name="guia" id="guia" value="500">SIM   <!--Adiciona o valor de 500 pelo guia-->
+        <input type="radio" name="guia" id="guia" value="0">NÃO
 
-            <label for="adicionais">Adicionais</label>
-            <input type="checkbox" name="adicionais" 
-                id="translado" value="100">
-            <label for="translado">  Translado </label>
-            <input type="checkbox" name="adicionais" id="passeios" value="200">           
-            <label for="passeios">Passeio</label>
-            <br>
-            <p id="pacote">Total do Pacote: </p>
-            <!--  <button onclick="orcar()"> Orçamento</button> -->
-            <p id="valorDestino"></p>
-            <p id="total"></p>
-            <input type="button" onclick="orcar()" value="Orçamento">
-            
-            <button onclick="limpar()" > Limpar</button>
-            <button onclick="imprimir()"> Imprimir</button>
-            <button onclick="fechar()"> Fim </button>
-            <input type="button" value="Fechar" onclick="fechar()">
+        <label for="adicionais">Adicionais</label>
+        <input type="checkbox" name="adicionais" id="translado" value="100">Translado
+        <input type="checkbox" name="adicionais" id="passeios" value="200">Passeios
+        <input type="checkbox" name="adicionais" id="trem" value="100">Passeio de Trem
 
-        </form>
-
+        <div>
+            <p id="total">Total do Pacote: <span></span></p>
+            <button onclick="preco()">Orçamento</button>
+            <button onclick="limpar()">Limpar</button>
+            <button onclick="imprimir()">Imprimir</button>
+            <button onclick="fechar()">Fim</button>
+        </div>
+    </form>
 </body>
 </html>
